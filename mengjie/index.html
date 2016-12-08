@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>yugi</title>
+<style type="text/css">
+#tab { overflow:hidden; width:960px; height:960px; position:relative; float:left;}
+#tab>img:not(:first-child){ display:none; }
+ 
+</style>
+<script>
+    window.onload = function(){
+     
+        var images = document.getElementsByTagName('img');
+        var pos = 0;
+        var len = images.length;
+         
+        setInterval(function(){
+         
+            images[pos].style.display = 'none';
+            pos = ++pos == len ? 0 : pos;
+            images[pos].style.display = 'inline';
+         
+        },3000);
+         
+    };
+</script>
+ 
+</head>
+ 
+<body>
+<div id="tab">
+    <img src="img/01.jpg"/>
+    <img src="img/02.jpg"/>
+    <img src="img/03.jpg"/>
+    <img src="img/04.jpg"/>
+</div>
+</body>
+</html>
